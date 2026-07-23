@@ -30,11 +30,17 @@ img{
 
 <body>
 
-<img src="IMG_20260723_222949_059.jpg" id="photo">
+<img id="photo" src="IMG_20260723_222949_059.jpg">
 
 <script>
 setInterval(()=>{
     document.getElementById("photo").src =
+    "IMG_20260723_222949_059.jpg?" + new Date().getTime();
+},5000);
+</script>
+
+</body>
+</html>    document.getElementById("photo").src =
     "IMG_20260723_222949_059.jpg?" + new Date().getTime();
 },5000);
 </script>
