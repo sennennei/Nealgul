@@ -33,8 +33,19 @@ body {
 
 <body>
 
-<img id="photo" src="IMG_20260723_222949_059.jpg" alt="사진">
+<img id="photo" src="photo.jpg" alt="사진">
 
+<script>
+function reloadPhoto() {
+    document.getElementById("photo").src =
+        "photo.jpg?" + Date.now();
+}
+
+setInterval(reloadPhoto, 5000);
+</script>
+
+</body>
+</html>
 <script>
 function reloadPhoto() {
     document.getElementById("photo").src =
