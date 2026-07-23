@@ -47,6 +47,19 @@ setInterval(reloadPhoto, 5000);
 </script>
 
 </body>
+</html>
+<img id="photo" src="IMG_20260723_222949_059.jpg" alt="사진">
+
+<script>
+function reloadPhoto() {
+    document.getElementById("photo").src =
+        "IMG_20260723_222949_059.jpg?" + new Date().getTime();
+}
+
+setInterval(reloadPhoto, 5000);
+</script>
+
+</body>
 </html>    document.getElementById("photo").src =
     "IMG_20260723_222949_059.jpg?" + new Date().getTime();
 },5000);
