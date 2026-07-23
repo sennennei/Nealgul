@@ -17,24 +17,37 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
+    width:100vw;
     height:100vh;
+    overflow:hidden;
 }
 
 img{
-    width:100vw;
-    height:100vh;
-    object-fit:contain;
+    max-width:100%;
+    max-height:100%;
+    width:auto;
+    height:auto;
+    display:block;
 }
 </style>
+
 </head>
 
 <body>
 
-<img id="photo" src="IMG_20260723_222949_059.jpg">
+<img id="photo" src="IMG_20260723_222949_059.jpg" alt="사진">
 
 <script>
-setInterval(()=>{
+function reloadPhoto() {
     document.getElementById("photo").src =
+        "IMG_20260723_222949_059.jpg?" + new Date().getTime();
+}
+
+setInterval(reloadPhoto, 5000);
+</script>
+
+</body>
+</html>    document.getElementById("photo").src =
     "IMG_20260723_222949_059.jpg?" + new Date().getTime();
 },5000);
 </script>
