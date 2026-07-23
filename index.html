@@ -6,35 +6,46 @@
 <title>사진 사이트</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
 }
 
-body{
-    background:#000;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    width:100vw;
-    height:100vh;
-    overflow:hidden;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-img{
-    max-width:100%;
-    max-height:100%;
-    width:auto;
-    height:auto;
-    display:block;
+#photo {
+    display: block;
+    margin: auto;
+    max-width: 100vw;
+    max-height: 100vh;
+    width: auto;
+    height: auto;
 }
 </style>
-
 </head>
 
 <body>
 
+<img id="photo" src="IMG_20260723_222949_059.jpg" alt="사진">
+
+<script>
+function reloadPhoto() {
+    document.getElementById("photo").src =
+        "IMG_20260723_222949_059.jpg?" + Date.now();
+}
+
+setInterval(reloadPhoto, 5000);
+</script>
+
+</body>
+</html>
 <img id="photo" src="IMG_20260723_222949_059.jpg" alt="사진">
 
 <script>
